@@ -9,14 +9,23 @@ public class TableUtilities {
                 int product = i*j;
                 if (product<10){
                     System.out.print("   "+product);
+                    result +=String.format("  %d |",product);
                 }
-                else{
+                else if(product<100){
                     System.out.print(" "+product);
+                    result +=String.format(" %d |",product);
+                }
+                else {
+                    System.out.print(" "+product);
+                    result +=String.format("%d |",product);
                 }
             }
+            result +=String.format("\n");
             System.out.println();
         }
-
+       // String result;
+        //string cat didnt give me enough controll
+       // result =String.format("%s %.2f %.2f %.2f",name,grossPay,deduction,netPay);
 
         return result;
     }
@@ -29,11 +38,18 @@ public class TableUtilities {
                 int product = i*j;
                 if (product<10){
                     System.out.print("   "+product);
+                    result +=String.format("  %d |",product);
                 }
-                else{
+                else if(product<100){
                     System.out.print(" "+product);
+                    result +=String.format(" %d |",product);
+                }
+                else {
+                    System.out.print(" "+product);
+                    result +=String.format("%d |",product);
                 }
             }
+            result +=String.format("\n");
             System.out.println();
         }
 
@@ -44,16 +60,25 @@ public class TableUtilities {
     public static String getMultiplicationTable(int tableSize) {
         String result ="";
 
+
+
         for (int i=1;i<=tableSize;i++){
-            for (int j=1;j<=20;j++){
+            for (int j=1;j<=tableSize;j++){
                 int product = i*j;
-                if (product<20){
+                if (product<10){
                     System.out.print("   "+product);
+                    result +=String.format("  %d |",product);
                 }
-                else{
+                else if(product<100){
                     System.out.print(" "+product);
+                    result +=String.format(" %d |",product);
+                }
+                else {
+                    System.out.print(" "+product);
+                    result +=String.format("%d |",product);
                 }
             }
+            result +=String.format("\n");
             System.out.println();
         }
 
